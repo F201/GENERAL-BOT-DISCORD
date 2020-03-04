@@ -1,4 +1,10 @@
 module.exports = (message, msgContent) => {
+  console.log(message.channel.id)
+  if (message.channel.name !== 'kenalan-kuy') {
+    return message.reply(`Command not available!`).then(replyMsg => {
+      replyMsg.delete({timeout: 7000});
+    });
+  }
   const userMessage = msgContent.substring(1+'kenalankuy'.length);
   const idxConstName = userMessage.toLowerCase().indexOf('nama:');
   if (idxConstName === -1){
