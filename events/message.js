@@ -4,7 +4,7 @@ module.exports = (client, msg) => {
   const kenalanKuy = require('../commands/kenalanKuy');
   // Our bot needs to know if it will execute a command
   // It will listen for messages that will start with `!`
-  if (message.substring(0, 1) == '!') {
+  if (message.substring(0, 1) == '$') {
       let closestTag = message.indexOf(' ') < message.indexOf('\n') ? ' ' : '\n'
       var args = message.substring(1).split(closestTag);
       console.log(args)
